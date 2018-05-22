@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]>
+<html class="ie9"><![endif]-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Violate Responsive Admin Template">
+    <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+    <title>UPAS</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/calendar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/icons.css" rel="stylesheet">
+    <link href="css/generics.css" rel="stylesheet">
+</head>
+<body id="skin-blur-chrome">
+
+<header id="header" class="media">
+    <a href="" id="menu-toggle"></a>
+    <a class="logo pull-left" href="index.html">UPAS</a>
+
+    <div class="media-body">
+        <div class="media" id="top-menu">
+            <div id="time" class="pull-right">
+                <span id="hours"></span>:
+                <span id="min"></span>:
+                <span id="sec"></span>
+            </div>
+            <div class="media-body">
+                <form action="php/search.php" method="post">
+                <input type="text" id="keyword" name="keyword" class="main-search" placeholder="请输入用户ID"
+                       style="width: auto" onblur="inputonblur()"/>
+                <input type="submit" class="btn btn-sm btn-alt" value="查询"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="clearfix"></div>
+
+<section id="main" class="p-relative" role="main">
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <!-- Sidbar Widgets -->
+        <div class="side-widgets overflow">
+            <!-- Profile Menu -->
+            <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+                <a href="" data-toggle="dropdown">
+                    <img class="profile-pic animated" src="img/profile-pic.png" alt="">
+                </a>
+                <h4 class="m-0">X510-IDC</h4>
+                @chzu
+            </div>
+
+            <!-- Calendar -->
+            <div class="s-widget m-b-25">
+                <div id="sidebar-calendar"></div>
+            </div>
+        </div>
+
+        <!-- Side Menu -->
+        <ul class="list-unstyled side-menu">
+            <li>
+                <a class="sa-side-home" href="index.html">
+                    <span class="menu-item">Home</span>
+                </a>
+            </li>
+            <li class="active">
+                <a class="sa-side-calendar" href="person.html">
+                    <span class="menu-item">Person</span>
+                </a>
+            </li>
+            <li>
+                <a class="sa-side-chart" href="analysis.html">
+                    <span class="menu-item">Charts</span>
+                </a>
+            </li>
+            <li>
+                <a class="sa-side-typography" href="about.html">
+                    <span class="menu-item">About</span>
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+
+    <!-- Content -->
+    <section id="content" class="container">
+
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb hidden-xs">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Typography</a></li>
+            <li class="active">Data</li>
+        </ol>
+
+        <h4 class="page-title">PERSON DATA</h4>
+
+        <!-- Quick Stats -->
+        <div class="block-area">
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <div class="tile quick-stats">
+                        <div id="stats-line-2" class="pull-left"></div>
+                        <div class="data">
+                            <h2>Name</h2>
+                            <small id="uname">吴奥芝</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="tile quick-stats media">
+                        <div id="stats-line-3" class="pull-left"></div>
+                        <div class="media-body">
+                            <h2>Gender</h2>
+                            <small id="usex">女</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="tile quick-stats media">
+                        <div id="stats-line-4" class="pull-left"></div>
+
+                        <div class="media-body">
+                            <h2>Telephone</h2>
+                            <small id="utel">15385902431</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="tile quick-stats media">
+                        <div id="stats-line" class="pull-left"></div>
+                        <div class="media-body">
+                            <h2>E-mail</h2>
+                            <small id="umail">728233343@foxmail.com</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr class="whiter"/>
+
+        <!-- Pies -->
+        <div class="block-area">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="tile">
+                        <h2 class="tile-title">AREA</h2>
+                        <div class="p-10">
+                            <div id="products" class="main-chart" style="height: 600px"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="tile">
+                        <h2 class="tile-title">AGES</h2>
+                        <div class="p-10">
+                            <div id="pie-chart" class="main-chart" style="height: 600px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="whiter"/>
+
+        <!-- Main Widgets -->
+        <div class="block-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="tile">
+                        <h2 class="tile-title">GENDER</h2>
+                        <div id="donut-chart" style="height: 450px"></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tile">
+                        <h2 class="tile-title">E-mail</h2>
+                        <div id="mail" style="height: 450px"></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tile">
+                        <h2 class="tile-title">Names</h2>
+                        <div id="name" style="height: 450px"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <hr class="whiter"/>
+
+    </section>
+
+    <!-- Older IE Message -->
+</section>
+
+<!-- Javascript Libraries -->
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script> <!-- jQuery Library -->
+<script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
+<script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Charts -->
+<script src="js/echarts.js"></script><!--echarts-->
+<script src="js/macarons.js"></script>
+<!--<script src="js/charts.js"></script> charts-->
+<script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+<script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+<script src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+<script src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
+
+<script src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+
+<!--  Form Related -->
+<script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+
+<!-- UX -->
+<script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+
+<!-- Other -->
+<script src="js/calendar.min.js"></script> <!-- Calendar -->
+<script src="js/feeds.min.js"></script> <!-- News Feeds -->
+
+
+<!-- All JS functions -->
+<script src="js/functions.js"></script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('pie-chart'), 'macarons');
+    var ages = new Array(), num = new Array();
+
+    function getcharts() {
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "php/pieone.php",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                if (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        ages.push(data[i].ages);
+                        num.push({
+                            name: data[i].ages,
+                            value: data[i].num
+                        });
+                    }
+                }
+            },
+            error: function (errmsg) {
+                alert("Ajax获取服务器数据出错了！" + errmsg);
+            }
+        });
+        return ages, num;
+    }
+
+    getcharts();
+    option = {
+        title: {
+            text: '年龄段消费次数统计',
+            subtext: '测试数据',
+            left: 'center',
+            textStyle: {
+                fontWeight: 'normal', color: 'rgba(255,255,255,0.8)'
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            bottom: 10,
+            left: 'center',
+            data: ages,
+            textStyle: {
+                fontWeight: 'normal', color: 'rgba(255,255,255,0.8)'
+            }
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: '70%',
+                center: ['50%', '50%'],
+                selectedMode: 'single',
+                data: num,
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('donut-chart'), 'macarons');
+    var sex = new Array(), sum = new Array();
+
+    function donutcharts() {
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "php/pietwo.php",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                if (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        sex.push(data[i].sex);
+                        sum.push({
+                            name: data[i].sex,
+                            value: data[i].sum
+                        });
+                    }
+                }
+            },
+            error: function (errmsg) {
+                alert("Ajax获取服务器数据出错了！" + errmsg);
+            }
+        });
+        return sex, sum;
+    }
+
+    donutcharts();
+    option2 = {
+        title: {
+            text: '不同性别消费次数统计',
+            subtext: '测试数据',
+            left: 'center',
+            textStyle: {
+                fontWeight: 'normal', color: 'rgba(255,255,255,0.8)'
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            bottom: 10,
+            left: 'center',
+            data: sex,
+            textStyle: {
+                fontWeight: 'normal', color: 'rgba(255,255,255,0.8)'
+            }
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: '70%',
+                center: ['50%', '50%'],
+                selectedMode: 'single',
+                data: sum,
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option2);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('products'), 'macarons');
+    var city = new Array(), sum = new Array();
+
+    function getproducts() {
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "php/product.php",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                if (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        city.push(data[i].city);
+                        sum.push({
+                            name: data[i].city,
+                            value: data[i].sum
+                        });
+                    }
+                }
+            },
+            error: function (errmsg) {
+                alert("Ajax获取服务器数据出错了！" + errmsg);
+            }
+        });
+        return city, sum;
+    }
+
+    getproducts();
+    optionproduct = {
+        title: {
+            text: '不同地区销售次数统计',
+            subtext: '测试数据',
+            left: 'center',
+            textStyle: {
+                fontWeight: 'normal', color: 'rgba(255,255,255,0.8)'
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            bottom: 10,
+            left: 'center',
+            data: city,
+            textStyle: {
+                fontWeight: 'normal', color: 'rgba(255,255,255,0.8)'
+            }
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: '60%',
+                center: ['50%', '50%'],
+                selectedMode: 'single',
+                data: sum,
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(optionproduct);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('mail'), 'macarons');
+    var mail = new Array(), sum = new Array();
+
+    function getmail() {
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "php/mail.php",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                if (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        mail.push(data[i].mail);
+                        sum.push({
+                            name: data[i].mail,
+                            value: data[i].sum
+                        });
+                    }
+                }
+            },
+            error: function (errmsg) {
+                alert("Ajax获取服务器数据出错了！" + errmsg);
+            }
+        });
+        return mail, sum;
+    }
+
+    getmail();
+    optionmail = {
+        title: {
+            text: '消费者使用邮箱统计',
+            subtext: '测试数据',
+            left: 'center',
+            textStyle: {
+                fontWeight: 'normal', color: 'rgba(255,255,255,0.8)'
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            bottom: 10,
+            left: 'center',
+            data: mail,
+            textStyle: {
+                fontWeight: 'normal', color: 'rgba(255,255,255,0.8)'
+            }
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: '60%',
+                center: ['50%', '50%'],
+                selectedMode: 'single',
+                data: sum,
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(optionmail);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('name'), 'macarons');
+    var na = new Array(), sum = new Array();
+
+    function getname() {
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "php/name.php",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                if (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        na.push(data[i].name);
+                        sum.push({
+                            name: data[i].name,
+                            value: data[i].sum
+                        });
+                    }
+                }
+            },
+            error: function (errmsg) {
+                alert("Ajax获取服务器数据出错了！" + errmsg);
+            }
+        });
+        return na, sum;
+    }
+
+    getname();
+    optionname = {
+        title: {
+            text: '消费者姓氏Top 10',
+            subtext: '测试数据',
+            left: 'center',
+            textStyle: {
+                fontWeight: 'normal', color: 'rgba(255,255,255,0.8)'
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            bottom: 10,
+            left: 'center',
+            data: na,
+            textStyle: {
+                fontWeight: 'normal', color: 'rgba(255,255,255,0.8)'
+            }
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: '60%',
+                center: ['50%', '50%'],
+                selectedMode: 'single',
+                data: sum,
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(optionname);
+</script>
+<!--<script type="text/javascript">
+
+    function inputonblur() {
+        var thisval = $("#keyword").val();
+        if (thisval == "") {
+            $("#keyword").attr("placeholder", "请输入用户ID");
+        }
+    }
+
+    function search(){
+        var keyword=$("#keyword").val();
+        var uname,usex,utel,umail;
+        $.ajax({
+                type:"POST",
+                url:'php/search.php',
+                dataType:"json",
+                data:{'keyword':keyword},
+                success: function (data) {
+                    var html='';
+                    for(i=0;i<data.length;i++){
+                        uname=data.UserName;
+                        usex=data.UserGender;
+                        utel=data.UserPhone;
+                        umail=data.UserEmail;
+                    }
+                    $("#uname").html(uname);
+                    $("#usex").html(usex);
+                    $("#utel").html(utel);
+                    $("#umail").html(umail);
+                },
+                error:function (msg) {
+                    alert("error"+msg);
+                }
+            }
+        )
+    }
+
+</script>-->
+</body>
+</html>

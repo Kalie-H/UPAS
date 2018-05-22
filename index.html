@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<!--[if IE 9 ]>
+<html class="ie9"><![endif]-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Violate Responsive Admin Template">
+    <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+    <title>UPAS</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/calendar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/icons.css" rel="stylesheet">
+    <link href="css/generics.css" rel="stylesheet">
+</head>
+<body id="skin-blur-chrome">
+
+<header id="header" class="media">
+    <a href="" id="menu-toggle"></a>
+    <a class="logo pull-left" href="index.html">UPAS</a>
+
+    <div class="media-body">
+        <div class="media" id="top-menu">
+            <div id="time" class="pull-right">
+                <span id="hours"></span>:
+                <span id="min"></span>:
+                <span id="sec"></span>
+            </div>
+            <div class="media-body">
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="clearfix"></div>
+
+<section id="main" class="p-relative" role="main">
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <!-- Sidbar Widgets -->
+        <div class="side-widgets overflow">
+            <!-- Profile Menu -->
+            <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+                <a href="" data-toggle="dropdown">
+                    <img class="profile-pic animated" src="img/profile-pic.png" alt="">
+                </a>
+                <h4 class="m-0">X510-IDC</h4>
+                @chzu
+            </div>
+
+            <!-- Calendar -->
+            <div class="s-widget m-b-25">
+                <div id="sidebar-calendar"></div>
+            </div>
+        </div>
+
+        <!-- Side Menu -->
+        <ul class="list-unstyled side-menu">
+            <li class="active">
+                <a class="sa-side-home" href="index.html">
+                    <span class="menu-item">Home</span>
+                </a>
+            </li>
+            <li>
+                <a class="sa-side-calendar" href="person.html">
+                    <span class="menu-item">Person</span>
+                </a>
+            </li>
+            <li>
+                <a class="sa-side-chart" href="analysis.html">
+                    <span class="menu-item">Charts</span>
+                </a>
+            </li>
+            <li>
+                <a class="sa-side-typography" href="about.html">
+                    <span class="menu-item">About</span>
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+    <!-- Content -->
+    <section id="content" class="container">
+
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb hidden-xs">
+            <li class="active">Home</li>
+            <li><a href="about.html">Typography</a></li>
+            <li><a href="person.html">Data</a></li>
+        </ol>
+
+        <h4 class="page-title">DASHBOARD</h4>
+
+        <!-- Quick Stats -->
+        <div class="block-area">
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <div class="tile quick-stats">
+                        <div id="stats-line-2" class="pull-left"></div>
+                        <div class="data">
+                            <h2>10000</h2>
+                            <small>Users</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="tile quick-stats media">
+                        <div id="stats-line-3" class="pull-left"></div>
+                        <div class="media-body">
+                            <h2>52</h2>
+                            <small>Category of Goods</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="tile quick-stats media">
+
+                        <div id="stats-line-4" class="pull-left"></div>
+
+                        <div class="media-body">
+                            <h2>20000</h2>
+                            <small>Orders</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="tile quick-stats media">
+                        <div id="stats-line" class="pull-left"></div>
+                        <div class="media-body">
+                            <h2>49.46%</h2>
+                            <small>Shipped Rate</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr class="whiter"/>
+
+        <!-- Jumbotron -->
+        <div class="block-area" id="jumbotron">
+            <div class="jumbotron tile-light">
+                <div class="container">
+                    <h1>Welcome to UPAS</h1>
+                    <p>This is a DA of the user's shopping behavior. </p>
+                    <p>Creating a user's portrait based on the user's shopping and web browsing behavior to achieve a
+                        precise positioning of the user demand.</p>
+                    <p><a href="about.html" class="btn btn-alt btn-lg">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="whiter"/>
+
+        <!-- Main Widgets -->
+
+        <div class="block-area">
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- Main Chart -->
+                    <div class="tile">
+                        <h2 class="tile-title">YEAR SALES</h2>
+                        <div class="p-10">
+                            <div id="line-chart" class="main-chart" style="height: 280px"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- China Map -->
+                <div class="col-md-4">
+                    <div class="tile">
+                        <a href="analysis.html">
+                        <h2 class="tile-title">Live Visits</h2>
+                        <div id="china-map" style="height: 300px"></div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Older IE Message -->
+</section>
+
+<!-- Javascript Libraries -->
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script> <!-- jQuery Library -->
+<script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
+<script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Charts -->
+<script src="js/echarts.js"></script><!--echarts-->
+
+<script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+<script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+<script src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+<script src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
+
+<script src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+<script src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
+<script src="js/charts.js"></script> <!-- All the above chart related functions -->
+
+<!-- Map -->
+<script src="js/china.js"></script> <!-- USA Map for jVectorMap -->
+
+<!--  Form Related -->
+<script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+
+<!-- UX -->
+<script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+
+<!-- Other -->
+<script src="js/calendar.min.js"></script> <!-- Calendar -->
+<script src="js/feeds.min.js"></script> <!-- News Feeds -->
+
+
+<!-- All JS functions -->
+<script src="js/functions.js"></script>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('line-chart'));
+    var year = new Array(), sales = new Array();
+
+    function getuser() {
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "php/test.php",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                if (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        year.push(data[i].year);
+                        sales.push(data[i].sales);
+                    }
+                }
+            },
+            error: function (errmsg) {
+                alert("Ajax获取服务器数据出错了！" + errmsg);
+            }
+        });
+        return year, sales;
+    }
+
+    getuser();
+    var option = {
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            name: '年份',
+            data: year,
+            tickColor: 'rgba(255,255,255,0)',
+            tickDecimals: 0,
+            font: {
+                lineHeight: 13,
+                style: "normal",
+                color: "rgba(255,255,255,0.8)",
+            },
+            axisLine:{
+                lineStyle:{
+                    color:"rgba(255,255,255,0.8)",
+                    width:1,//这里是为了突出显示加上的
+                }
+            }
+        },
+        yAxis: {
+            splitLine:{
+              show:false
+            },
+            name: '销量',
+            type: 'value',
+            min: 2300,
+            max: 2600,
+            tickColor: 'rgba(255,255,255,0)',
+            tickDecimals: 0,
+            font: {
+                lineHeight: 13,
+                style: "normal",
+                color: "rgba(255,255,255,0.8)",
+            },
+            shadowSize: 0,
+            axisLine:{
+                lineStyle:{
+                    color:"rgba(255,255,255,0.8)",
+                    width:1,//这里是为了突出显示加上的
+                }
+            }
+        },
+        series: [{
+            data: sales,
+            type: 'line',
+            areaStyle: {},
+            lines: {
+                show: true,
+                lineWidth: 1,
+                fill: 0.25,
+            },
+
+            color: "rgba(255,255,255,0.8)",
+            shadowSize: 0,
+            points: {
+                show: true,
+            },
+            itemStyle:{
+                normal: {
+                    label : {show: true,position: 'right',color:"#009fe8" }}
+            }
+        }],
+        grid: {
+            borderWidth: 1,
+            borderColor: 'rgba(255,255,255,0.8)',
+            labelMargin:2,
+            hoverable: true,
+            clickable: true,
+            mouseActiveRadius:6,
+        },
+        legend: {
+            show: false
+        }
+    }
+    myChart.setOption(option);
+</script><!--maincharts-->
+<script type="text/javascript">
+    function entersearch(){
+        var event = window.event || arguments.callee.caller.arguments[0];
+        if (event.keyCode == 13)
+        {
+            search();
+        }
+    };
+    function search() {
+        var data = $("#keyword").val();
+        window.location.href ="person.html";
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "php/search.php",
+            data: {},
+            dataType: "json",
+            success: function(data) {
+                alert("zaine");
+            },
+            error: function (errmsg) {
+                alert("Ajax获取服务器数据出错了！" + errmsg);
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('china-map'));
+    var option = {
+        tooltip: {
+//                    show: false //不显示提示标签
+            formatter: '{b}', //提示标签格式
+            backgroundColor:"#ff7f50",//提示标签背景颜色
+            textStyle:{color:"#fff"} //提示标签字体颜色
+        },
+        series: [{
+            type: 'map',
+            mapType: 'china',
+            label: {
+                normal: {
+                    show:false,//显示省份标签
+                    textStyle:{color:"#c71585"}//省份标签字体颜色
+                },
+                emphasis: {//对应的鼠标悬浮效果
+                    show: true,
+                    textStyle:{color:"#800080"}
+                }
+            },
+            itemStyle: {
+                normal: {
+                    borderWidth: .5,//区域边框宽度
+                    borderColor: '#009fe8',//区域边框颜色
+                    areaColor:"#ffefd5",//区域颜色
+                },
+                emphasis: {
+                    borderWidth: .5,
+                    borderColor: '#4b0082',
+                    areaColor:"#ffdead",
+                }
+            },
+            data:[
+            ]
+        }],
+    };
+    myChart.setOption(option);
+
+</script>
+</body>
+</html>
